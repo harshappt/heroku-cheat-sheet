@@ -1,0 +1,31 @@
+1. heroku create
+
+2. git push heroku origin
+
+If app is not running we need to make sure at least one dyno is assigned.
+
+3. heroku ps
+         from an app folder or specify which app to use with --app APP.
+
+if there is no web dyno assigned,
+
+4. check Procfile exists by running "heroku run bash"
+
+5. If there is no Procfile exists, create one in the application folder
+
+        touch Procfile
+
+6. Edit Procfile with  "web: sh target/bin/ppt"
+
+7. foreman start
+
+        run this from app folder to makesure we can deploy application in the Heroku
+
+8. git add Procfile
+
+9. git commit
+
+10. git push origin master
+
+11. git push heroku master
+
